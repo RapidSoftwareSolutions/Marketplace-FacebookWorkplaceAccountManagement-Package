@@ -1,0 +1,248 @@
+{
+  "package": "FacebookWorkplaceAccountManagement",
+  "tagline": "Facebook Workplace Account Management API",
+  "description": "This set of Facebook Workplace API calls will allow you to build a custom connector to provision and deactivate your people who are stored on your user directory.",
+  "image": "https://logo.clearbit.com/work.facebook.com",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-FacebookWorkplaceAccountManagement-Package",
+  "keywords": [
+    "API",
+    "work",
+    "facebook",
+    "team"
+  ],
+  "accounts": {
+    "domain": "work.facebook.com",
+    "credentials": [
+      "accessToken"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "createAccountForPerson",
+      "description": "When a new person joins your organization or is newly-granted access to Workplace, you must create an account for them",
+      "args": [
+        {
+        "name": "accessToken",
+        "type": "credentials",
+        "info": "The api key obtained from Facebook Workplace",
+        "required": true
+        },
+        {
+          "name": "scimId",
+          "type": "Number",
+          "info": "Your scim company id",
+          "required": true
+        },
+        {
+          "name": "userName",
+          "type": "String",
+          "info": "Unique identifier for the user, used by the user to directly authenticate with the service provider. Must be unique.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "The components of the Users real name.",
+          "required": true
+        },
+        {
+          "name": "active",
+          "type": "Boolean",
+          "info": "A Boolean value indicating whether a user is active. Set to true if the user is able to access Workplace and should receive email and mobile push notifications. Set to false to cause the user to be logged out and to prevent the user from receiving further emails or mobile push notifications.",
+          "required": false
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "Primary user e-mail",
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Title of the user, e.g., Vice President.",
+          "required": false
+        },
+        {
+          "name": "nickName",
+          "type": "String",
+          "info": "The casual way to address the user in real life, e.g., Bob or Bobby instead of Robert. This attribute SHOULD NOT be used to represent a username.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "updateUser",
+      "description": "When any user attribute changes in your user directory, you must update the user's account in Workplace. This can either be done on event, when the underlying data changes, or in a batch, say every 3 hours.",
+      "args": [
+        {
+        "name": "accessToken",
+        "type": "credentials",
+        "info": "The api key obtained from Facebook Workplace",
+        "required": true
+        },
+        {
+          "name": "scimId",
+          "type": "Number",
+          "info": "Your scim company id",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Workplace id",
+          "required": true
+        },
+        {
+          "name": "userName",
+          "type": "String",
+          "info": "Unique identifier for the user, used by the user to directly authenticate with the service provider. Must be unique.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "The components of the Users real name.",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "Primary user e-mail",
+          "required": false
+        },
+        {
+          "name": "active",
+          "type": "Boolean",
+          "info": "A Boolean value indicating whether a user is active. Set to true if the user is able to access Workplace and should receive email and mobile push notifications. Set to false to cause the user to be logged out and to prevent the user from receiving further emails or mobile push notifications.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Title of the user, e.g., Vice President.",
+          "required": false
+        },
+        {
+          "name": "nickName",
+          "type": "String",
+          "info": "The casual way to address the user in real life, e.g., Bob or Bobby instead of Robert. This attribute SHOULD NOT be used to represent a username.",
+          "required": false
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "getAllUsers",
+      "description": "You can retrieve the information about your users",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "scimId",
+          "type": "Number",
+          "info": "Your scim company id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deactivateUserAccount",
+      "description": "When a person leaves your organization or should not longer have access to Workplace, you must deactivate their account",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "scimId",
+          "type": "Number",
+          "info": "Your scim company id",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Workplace id",
+          "required": true
+        },
+        {
+          "name": "userName",
+          "type": "String",
+          "info": "Unique identifier for the user, used by the user to directly authenticate with the service provider. Must be unique.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "The components of the Users real name.",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    },
+    {
+      "name": "deletingUserAccount",
+      "description": "If a person's account has been created in error and that account has never been claimed by the user you can delete it",
+      "args": [
+        {
+          "name": "accessToken",
+          "type": "credentials",
+          "info": "The api key obtained from Facebook Workplace",
+          "required": true
+        },
+        {
+          "name": "scimId",
+          "type": "Number",
+          "info": "Your scim company id",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "Workplace id",
+          "required": true
+        }
+      ],
+      "callbacks": [{
+        "name": "error",
+        "info": "Error"
+      }, {
+        "name": "success",
+        "info": "Success"
+      }]
+    }
+  ]
+}
