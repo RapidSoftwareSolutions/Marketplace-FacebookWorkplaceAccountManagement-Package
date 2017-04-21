@@ -1,14 +1,20 @@
 {
   "package": "FacebookWorkplaceAccountManagement",
   "tagline": "Facebook Workplace Account Management API",
-  "description": "This set of Facebook Workplace API calls will allow you to build a custom connector to provision and deactivate your people who are stored on your user directory.",
+  "description": "Workplace provides an Account Management API for managing user accounts and a Graph API for managing groups membership, and content that exists within your instance.",
   "image": "https://logo.clearbit.com/work.facebook.com",
   "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-FacebookWorkplaceAccountManagement-Package",
   "keywords": [
     "API",
-    "work",
-    "facebook",
-    "team"
+    "Facebook",
+    "HR",
+    "Linkedin",
+    "business",
+    "enterprise",
+    "media",
+    "networking",
+    "social",
+    "Social"
   ],
   "accounts": {
     "domain": "work.facebook.com",
