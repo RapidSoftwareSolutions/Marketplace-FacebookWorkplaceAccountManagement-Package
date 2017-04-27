@@ -1,4 +1,4 @@
-[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/QuickBooksAccounting/functions?utm_source=RapidAPIGitHub_QuickBooksAccountingFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/FacebookWorkplaceAccountManagement/functions?utm_source=RapidAPIGitHub_FacebookWorkplaceAccountManagementFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
 
 # FacebookWorkplaceAccountManagement Package
 This set of Facebook Workplace API calls will allow you to build a custom connector to provision and deactivate your people who are stored on your user directory.
