@@ -39,6 +39,10 @@ $app->post('/api/FacebookWorkplaceAccountManagement/updateUser', function ($requ
     }
 
     $active=true;
+    if(isset($post_data['args']['active']))
+    {
+        $active = $post_data['args']['active'];
+    }
 
 
     $scim = new \Models\ScimModel($username, $name, $active, $email, $title, $nickName);

@@ -53,7 +53,8 @@
         },
         {
           "name": "active",
-          "type": "Boolean",
+          "type": "Select",
+          "options":["true","false"],
           "info": "A Boolean value indicating whether a user is active. Set to true if the user is able to access Workplace and should receive email and mobile push notifications. Set to false to cause the user to be logged out and to prevent the user from receiving further emails or mobile push notifications.",
           "required": false
         },
@@ -126,7 +127,8 @@
         },
         {
           "name": "active",
-          "type": "Boolean",
+          "type": "Select",
+          "options":["true","false"],
           "info": "A Boolean value indicating whether a user is active. Set to true if the user is able to access Workplace and should receive email and mobile push notifications. Set to false to cause the user to be logged out and to prevent the user from receiving further emails or mobile push notifications.",
           "required": false
         },
