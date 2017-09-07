@@ -41,7 +41,12 @@ $app->post('/api/FacebookWorkplaceAccountManagement/updateUser', function ($requ
     $active=true;
     if(isset($post_data['args']['active']))
     {
-        $active = $post_data['args']['active'];
+        if($post_data['args']['active'] == "true"){
+            $active = true;
+        } else if($post_data['args']['active'] == "false"){
+            $active = false;
+        }
+
     }
 
 
